@@ -1,98 +1,126 @@
-*{
-    padding: 0px;
-    margin: 0px;
+/* General Styles */
+*{ 
+    padding: 0;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       
 }
 
-body{
-   
-    background-image:url(img/Ellipse.png), url(img/bgpattern.png);
+body {
+    background-image: url(img/Ellipse.png), url(img/bgpattern.png);
     background-position: left center, right top;
     background-size: auto;
     background-repeat: no-repeat;
 }
 
-p{
+p {
     color: rgba(59, 57, 57, 0.936);
 }
-.navbar{
+
+/* Navbar Styles */
+.navbar {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: start;
-    padding-left: 50px;
-    padding-right: 50px;
+    align-items: center;
+    padding: 20px 50px;
     margin-top: 20px;
+    position: relative;
 }
 
 .logodiv {
     display: flex;
-    flex-direction: row;
-    align-items: end;
+    align-items: center;
 }
 
+.navmenu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
 
+.navbutton {
+    background-color: rgb(67, 143, 209);
+    color: #fff;
+    border-radius: 34px;
+    padding: 5px 20px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.navmenu a {
+    text-decoration: none;
+    color: rgba(59, 57, 57, 0.936);
+}
+
+/* Mobile Navbar Optimization */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgba(59, 57, 57, 0.936);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
 
 .navmenu {
     display: flex;
     flex-direction: row;
-    gap: 25px;
-    text-decoration: none;
     align-items: center;
-    justify-content: space-evenly;
-    
 }
 
-.navbutton{
-    background-color: rgb(67, 143, 209);
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    border-radius: 34px;
-    padding: 5px 20px ;
-    font-size: 15px;
-
+.navmenu-mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(67, 143, 209, 0.95);
+    padding: 20px 0;
+    gap: 15px;
+    z-index: 999;
+    text-align: center;
 }
 
-
-.navmenu a {
-    text-decoration: none;
-  
+.navmenu-mobile a {
+    color: white;
+    font-size: 18px;
 }
 
-.hero{
-    
+.show-menu {
+    display: flex !important;
+}
+
+/* Hero Section */
+.hero {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-around;
-    /* padding: 10px 50px; */
-    /* height: 70vh; */
-   
-    }
+    align-items: center;
+}
 
-    .herotext {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+.herotext {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-    }
-    .heroimage{
-        height: 75vh;
-    }
-
-
-
+.heroimage {
+    height: 75vh;
+}
 
 .drneelima {
     color: rgb(67, 143, 209);
 }
 
-.herobelt{
+/* Hero Belt */
+.herobelt {
     background-color: rgb(67, 143, 209);
     color: white;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     padding: 15px 50px;
     align-items: center;
@@ -103,4 +131,53 @@ p{
     border: 1px solid white;
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Media Queries */
+
+/* Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .navmenu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbutton {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .herotext {
+        padding: 20px;
+    }
+
+    .heroimage {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+}
+
+/* Tablet Screens (min-width: 769px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .herotext {
+        max-width: 60%;
+    }
+
+    .heroimage {
+        max-width: 90%;
+    }
 }

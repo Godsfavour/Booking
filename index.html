@@ -7,19 +7,31 @@
     <title>Booking System</title>
 </head>
 <body>
-<div class="navbar">
-    <div class="logodiv">
-        <img src="img/Vector.png" alt="curecare logo" class="logo">
-        <h5> CURECARE</h5>
+    <div class="navbar">
+        <div class="logodiv">
+            <img src="img/Vector.png" alt="curecare logo" class="logo">
+            <h5>CURECARE</h5>
+        </div>
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <div class="navmenu">
+            <a href="#">SERVICES</a>
+            <a href="#">TEAM</a>
+            <a href="#" class="navbutton">Book Appointment</a>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="navmenu-mobile" id="mobileMenu">
+            <a href="#">SERVICES</a>
+            <a href="#">TEAM</a>
+            <a href="#" class="navbutton">Book Appointment</a>
+        </div>
     </div>
-   
-    <div  class="navmenu">
-        <a href="#">SERVICES</a>
-        <a href="#">TEAM</a>
-        <a href="#" class="navbutton">Book Appointment</a>
-    </div>
-</div>
-
 <div class="hero">
 
     <div class="herotext">
@@ -48,5 +60,12 @@
 
 
     </div>
+    <script>
+        function toggleMenu() {
+            var mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show-menu');
+        }
+    </script>
+    
 </body>
 </html>
