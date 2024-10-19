@@ -1,0 +1,106 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+}
+
+body{
+   
+    background-image:url(img/Ellipse.png), url(img/bgpattern.png);
+    background-position: left center, right top;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+p{
+    color: rgba(59, 57, 57, 0.936);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
+}
+
+.logodiv {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+
+
+.navmenu {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.navbutton{
+    background-color: rgb(67, 143, 209);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 34px;
+    padding: 5px 20px ;
+    font-size: 15px;
+
+}
+
+
+.navmenu a {
+    text-decoration: none;
+  
+}
+
+.hero{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* padding: 10px 50px; */
+    /* height: 70vh; */
+   
+    }
+
+    .herotext {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+    }
+    .heroimage{
+        height: 75vh;
+    }
+
+
+
+
+.drneelima {
+    color: rgb(67, 143, 209);
+}
+
+.herobelt{
+    background-color: rgb(67, 143, 209);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px 50px;
+    align-items: center;
+}
+
+.herobelt p {
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
